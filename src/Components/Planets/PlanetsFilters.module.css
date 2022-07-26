@@ -1,0 +1,82 @@
+button{
+    border: 0;
+    padding: 0;
+}
+input{
+    border: none;
+    outline: none;
+}
+
+
+.container{
+    border: 2px solid #9C9C9C;
+    border-radius: 6px;
+    margin: 0 auto;
+    width: 75rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color:rgba(199, 199, 199, 0.3);
+}
+
+.content{
+    margin-right: 2rem;
+    margin-left: 2rem;
+}
+.pathName{
+    color: white;
+}
+
+.container h1{
+    color:#CDCDCD;
+    font-family: roboto, sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.filters input{
+    background-color: #2A2A2A;
+    width: 25rem;
+    height: 3rem;
+    border-radius: 5px;
+    color: #CDCDCD;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+
+}
+
+.filters select{
+    color:  #CDCDCD ;
+    background-color: #2A2A2A;
+    width: 25rem;
+    height: 3rem;
+    border-radius: 5px;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+
+}
+
+.filters input::placeholder{
+    color: #CDCDCD;
+}
+
+
+
+.filters button{
+    width: 10rem;
+    height: 3rem;
+    background-color: #63BCBC;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+
+}
+
+.filters button:hover{
+    background-color: tomato;
+}

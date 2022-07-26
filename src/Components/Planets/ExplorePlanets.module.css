@@ -1,0 +1,348 @@
+body{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+h1, h2, h3, h4, h5, h6,p{
+    margin: 0;
+    padding: 0;
+}
+
+
+.container{
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+    width: 85%;
+    display: grid;
+    grid-template-areas:
+    "planetImgContainer infoContainer"
+    "cardsContainer cardsContainer"
+    "addFormContainer addFormContainer"
+}
+
+
+.planetImgContainer{
+    display: grid;
+    grid-area: planetImgContainer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: white;
+    margin-right: 3.5rem;
+}
+
+.infoContainer{ 
+    display: grid;
+    grid-area: infoContainer;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.infoContainer h2{
+    font-family: Roboto, sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.infoContainer h1{
+    text-transform: uppercase;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    font-size: 3rem;
+    color: #FFFFFF;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.infoContainer p{
+    color: #FFFFFF;
+    font-family: Roboto, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.cardsContainer{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    width: 100%;
+    height: 12rem;
+    display: grid;
+    grid-area: cardsContainer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-family: Roboto, sans-serif;
+
+}
+
+.cards{
+    width: 200px;
+    height: 100px;
+    background-color: #2A2A2A4D;
+    border: 2px solid #CDCDCD;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addFormContainer{
+    background-color: #2A2A2A4D;
+    width: 86.5%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border: 2px solid #CDCDCD;
+    border-radius: 6px;
+    height: 90%;
+    display: grid;
+    grid-area: addFormContainer;
+    gap: 2rem;
+    grid-template-areas:
+    "tittle a b"
+    "inputName inputDescription inputDescription"
+    "inputArea inputDescription inputDescription"
+    "inputSunDistance inputDay inputGravity"
+    "nada pp buttonContainer"
+}
+
+.addFormContainer input{
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    color: #CDCDCD;
+    font-size: 1rem;
+    font-family: Roboto, sans-serif;
+    padding-left: 1rem;
+}
+
+.tittle{
+    display: grid;
+    grid-area: tittle;
+    color: #FFFFFF;
+    font-size: 2rem;
+    font-family: Roboto, sans-serif;
+}
+
+.inputName{
+    display: grid;
+    grid-area: inputName;
+    background-color: #2A2A2A;
+    border: 2px solid #CDCDCD;
+    border-radius: 5px;
+}
+
+.inputDescription{
+    display: grid;
+    grid-area: inputDescription;
+    background-color: #2A2A2A;
+    border: 2px solid #CDCDCD;
+    border-radius: 5px;
+}
+
+.inputArea{
+    display: grid;
+    grid-area: inputArea;
+    background-color: #2A2A2A;
+    border: 2px solid #CDCDCD;
+    border-radius: 5px;
+}
+
+.inputSunDistance{
+    display: grid;
+    grid-area: inputSunDistance;
+    background-color: #2A2A2A;
+    border: 2px solid #CDCDCD;
+    border-radius: 5px;
+}
+
+.inputDay{
+    display: grid;
+    grid-area: inputDay;
+    background-color: #2A2A2A;
+    border: 2px solid #CDCDCD;
+    border-radius: 5px;
+}
+.inputGravity{
+    display: grid;
+    grid-area: inputGravity;
+    background-color: #2A2A2A;
+    border: 2px solid #CDCDCD;
+    border-radius: 5px;
+}
+
+.buttonContainer{
+    grid-area: buttonContainer;
+    display: flex;
+    justify-content: right;
+    gap: 2rem;
+}
+
+
+.cancelButton{
+    display: grid;
+    grid-area: cancelButton;
+    background: none;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1rem 3rem 1rem 3rem;
+    text-align: center;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    cursor: pointer;
+
+
+}
+
+.cancelButton:hover{
+    color: blue;
+    background: coral;
+}
+
+.sendButton{
+    display: grid;
+    grid-area: sendButton;
+    background: #63BCBC;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 1rem 3rem 1rem 3rem;
+    text-align: center;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    cursor: pointer;
+}
+.sendButton:hover{
+    color: blue;
+    background: coral;
+}
+
+input::placeholder{
+    color: #CDCDCD;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
+.planetImg{
+    width: 400px;
+    height: 400px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color:rgba(33, 33, 33, 0.9);
+    color:#ffffff;
+    display:block;
+    font: 14px/1.3 Arial,sans-serif;
+    height:50px;
+    position:relative;
+    z-index:5;
+}
+h2{
+    margin-top: 30px;
+    text-align: center;
+}
+header h2{
+    font-size: 22px;
+    margin: 0 auto;
+    padding: 10px 0;
+    width: 80%;
+    text-align: center;
+}
+header a, a:visited {
+    text-decoration:none;
+    color:#fcfcfc;
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling, .clouds {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100vw;
+  display:block;
+}
+
+.stars {
+  background:rgb(0, 0, 0) url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background: rgba(199, 199, 199, 0.3) transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+    z-index:3;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}
