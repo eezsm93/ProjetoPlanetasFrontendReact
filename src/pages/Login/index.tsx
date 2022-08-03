@@ -1,9 +1,4 @@
-import React from "react";
-import styles from "./UserLogin.module.css";
-import Logo from "../../assets/images/Logo.png";
-import { Link, useLocation } from "react-router-dom";
-import EmailIcon from "@mui/icons-material/Email";
-import { authUser } from "../../Services/User/AuthUser";
+import react from "react";
 
 const Login = () => {
   return (
@@ -13,4 +8,4 @@ const Login = () => {
   );
 };
 
-export { Login };
+export default Login;
