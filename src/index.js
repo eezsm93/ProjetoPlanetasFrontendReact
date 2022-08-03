@@ -1,12 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import MainRoutes from './routes/MainRoutes';
+import React from "react";
+import { render } from "react-dom";
+import MainRoutes from "./routes/MainRoutes";
+import { MessageProvider } from "./context/MessageContext";
+import { UserProvider } from "./context/UserContext";
 
-
-ReactDOM.render(
+render(
   <React.StrictMode>
-    <MainRoutes />
+    <UserProvider>
+      <MessageProvider>
+        <MainRoutes />
+      </MessageProvider>
+    </UserProvider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root"),
 );
-

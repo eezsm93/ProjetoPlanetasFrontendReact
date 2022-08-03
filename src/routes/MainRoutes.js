@@ -1,26 +1,48 @@
-import React from 'react'
-import Login from '../Pages/Login/Login.js'
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from '../Pages/Home/Home'
-import Planets from '../Pages/Planets/Planets';
-import Explore from '../Pages/ExplorePlanets/Explore';
-import NewPlanet from '../Pages/NewPlanet/NewPlanet.js';
-import Register from '../Pages/Register/Register.js';
+import { Route, Routes, BrowserRouter } from "react-router-dom";
+import GlobalStyle from "../styles/GlobalStyle";
+import { useMessage } from "../context/MessageContext";
+import ModalMessage from "../components/ModalHelper";
+import { routes } from "./Routes";
+import AccessDenied from "../helpers/AccessDenied";
+import Header from "../components/Header";
+import { useUser } from "../context/UserContext";
 
 const MainRoutes = () => {
-  return (
-    <div> 
-    <BrowserRouter>
-        <Routes>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/login" element={<Login/>}/>
-            <Route path="/planetas" element={<Planets/>}/>
-            <Route path="/planetas/explorar" element={<Explore/>}/>
-            <Route path="/planetas/adicionar" element={<NewPlanet/>}/>
-            <Route path="/cadastrar" element={<Register/>}/>
-        </Routes>
-    </BrowserRouter></div>
-  )
-}
+  const { message } = useMessage();
+  const { user } = useUser();
 
-export default MainRoutes
+  function RouteVerification({ route }) {
+    return route.accessType.includes(user.profile) ? (
+      <>
+        <Header />
+        {route.element}
+      </>
+    ) : (
+      <AccessDenied />
+    );
+  }
+
+  return (
+    <BrowserRouter>
+      {message.display && <ModalMessage />}
+      <GlobalStyle />
+      <Routes>
+        {routes.map((route) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={
+              route.private ? (
+                <RouteVerification route={route} />
+              ) : (
+                route.element
+              )
+            }
+          />
+        ))}
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default MainRoutes;
